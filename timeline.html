@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WHYBE'26 - Timeline</title>
+<meta name="description" content="WHYBE'26 event timeline — 48 hours of hacking, building, and shipping." />
+<link rel="icon" type="image/png" href="./assets/whybe26-logo.png" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#0d1c2d",
+                      "primary-container": "#8083ff",
+                      "on-secondary": "#283500",
+                      "outline-variant": "#464554",
+                      "surface-container-high": "#1c2b3c",
+                      "surface": "#051424",
+                      "surface-bright": "#2c3a4c",
+                      "inverse-on-surface": "#233143",
+                      "surface-dim": "#051424",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-secondary-fixed": "#161e00",
+                      "error": "#ffb4ab",
+                      "primary": "#c0c1ff",
+                      "tertiary-container": "#8990a8",
+                      "on-tertiary-container": "#22293d",
+                      "surface-tint": "#c0c1ff",
+                      "on-secondary-container": "#556d00",
+                      "background": "#051424",
+                      "surface-container-lowest": "#010f1f",
+                      "on-error": "#690005",
+                      "secondary-fixed-dim": "#abd600",
+                      "tertiary-fixed-dim": "#bec6e0",
+                      "error-container": "#93000a",
+                      "surface-variant": "#273647",
+                      "tertiary-fixed": "#dae2fd",
+                      "on-tertiary": "#283044",
+                      "on-primary-container": "#0d0096",
+                      "inverse-surface": "#d4e4fa",
+                      "on-primary": "#1000a9",
+                      "on-tertiary-fixed-variant": "#3f465c",
+                      "tertiary": "#bec6e0",
+                      "on-tertiary-fixed": "#131b2e",
+                      "surface-container-highest": "#273647",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "secondary": "#ffffff",
+                      "surface-container": "#122131",
+                      "primary-fixed": "#e1e0ff",
+                      "secondary-fixed": "#c3f400",
+                      "on-surface-variant": "#c7c4d7",
+                      "on-surface": "#d4e4fa",
+                      "on-primary-fixed": "#07006c",
+                      "secondary-container": "#c3f400",
+                      "inverse-primary": "#494bd6",
+                      "outline": "#908fa0",
+                      "on-background": "#d4e4fa",
+                      "on-secondary-fixed-variant": "#3c4d00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base-unit": "4px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "container-max-width": "1280px",
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Inter"],
+                      "body-base": ["Inter"],
+                      "headline-md": ["Geist"],
+                      "display-lg": ["Geist"],
+                      "label-mono": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "display-lg-mobile": ["Geist"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(192, 193, 255, 0.15);
+            border-color: rgba(192, 193, 255, 0.5);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-base selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-outline-variant/10 shadow-[0_0_30px_rgba(192,193,255,0.1)]">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary">
+                WHYBE'26
+            </div>
+<div class="hidden md:flex gap-gutter font-label-caps text-label-caps items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300" href="./index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300" href="./about.html">About</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="./timeline.html">Timeline</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300" href="#">Leaderboard</a>
+</div>
+<button class="bg-[#6366f1] text-white px-6 py-2 rounded font-label-caps text-label-caps hover:brightness-110 active:scale-95 duration-200 transition-all">
+                Register
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto w-full">
+<div class="mb-stack-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">
+                Event Timeline
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-stack-sm max-w-2xl">
+                The critical path. 48 hours of uninterrupted hacking, building, and shipping. Plan your execution strategy.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
+<!-- Decorative Line for Desktop -->
+<div class="hidden md:block absolute left-[28px] top-4 bottom-4 w-px bg-outline-variant/30"></div>
+<!-- Day 1 -->
+<div class="col-span-1 md:col-span-12 group relative flex flex-col md:flex-row gap-stack-md md:gap-gutter">
+<div class="md:w-16 flex flex-row md:flex-col items-center md:items-start gap-stack-sm shrink-0 z-10">
+<div class="w-14 h-14 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center group-hover:border-primary transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-primary">DAY 1</span>
+</div>
+</div>
+<div class="flex-grow glass-card rounded-xl p-stack-md md:p-stack-lg glow-effect transition-all duration-300">
+<div class="flex flex-col gap-stack-md">
+<!-- Event 1 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center border-b border-outline-variant/10 pb-stack-sm">
+<div class="font-label-mono text-label-mono text-secondary-container w-24 shrink-0">
+                                09:00 AM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Registration &amp; Check-in</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Get your badges, swag, and settle into your battlestation.</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center border-b border-outline-variant/10 pb-stack-sm">
+<div class="font-label-mono text-label-mono text-secondary-container w-24 shrink-0">
+                                11:00 AM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Opening Ceremony</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Keynotes, track announcements, and API drops.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center">
+<div class="font-label-mono text-label-mono text-primary-container w-24 shrink-0 font-bold">
+                                12:00 PM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-primary">Hacking Begins</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Code freeze lifts. 48 hours on the clock.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="col-span-1 md:col-span-12 group relative flex flex-col md:flex-row gap-stack-md md:gap-gutter mt-stack-md md:mt-0">
+<div class="md:w-16 flex flex-row md:flex-col items-center md:items-start gap-stack-sm shrink-0 z-10">
+<div class="w-14 h-14 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center group-hover:border-primary transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-primary">DAY 2</span>
+</div>
+</div>
+<div class="flex-grow glass-card rounded-xl p-stack-md md:p-stack-lg glow-effect transition-all duration-300">
+<div class="flex flex-col gap-stack-md">
+<!-- Event 1 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center border-b border-outline-variant/10 pb-stack-sm">
+<div class="font-label-mono text-label-mono text-secondary-container w-24 shrink-0">
+                                ALL DAY
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Hacking Continues</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Uninterrupted build time.</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center border-b border-outline-variant/10 pb-stack-sm">
+<div class="font-label-mono text-label-mono text-secondary-container w-24 shrink-0">
+                                03:00 PM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Mentor Sessions</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Office hours with industry experts to unblock your team.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center">
+<div class="font-label-mono text-label-mono text-secondary-container w-24 shrink-0">
+                                12:00 AM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Midnight Snack</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Fuel up for the night shift.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="col-span-1 md:col-span-12 group relative flex flex-col md:flex-row gap-stack-md md:gap-gutter mt-stack-md md:mt-0">
+<div class="md:w-16 flex flex-row md:flex-col items-center md:items-start gap-stack-sm shrink-0 z-10">
+<div class="w-14 h-14 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center group-hover:border-primary transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-primary">DAY 3</span>
+</div>
+</div>
+<div class="flex-grow glass-card rounded-xl p-stack-md md:p-stack-lg glow-effect transition-all duration-300">
+<div class="flex flex-col gap-stack-md">
+<!-- Event 1 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center border-b border-outline-variant/10 pb-stack-sm">
+<div class="font-label-mono text-label-mono text-error w-24 shrink-0 font-bold">
+                                12:00 PM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-error">Hacking Ends</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Pencils down. Code freeze.</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center border-b border-outline-variant/10 pb-stack-sm">
+<div class="font-label-mono text-label-mono text-secondary-container w-24 shrink-0">
+                                02:00 PM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Presentations</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Demo your builds to the judges.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex flex-col sm:flex-row gap-stack-sm sm:gap-gutter items-start sm:items-center">
+<div class="font-label-mono text-label-mono text-primary-container w-24 shrink-0">
+                                05:00 PM
+                            </div>
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Closing Ceremony</h3>
+<p class="font-body-base text-body-base text-on-surface-variant">Winners announced. Prizes distributed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-primary">
+                WHYBE'26
+            </div>
+<div class="font-body-base text-body-base text-secondary-container dark:text-secondary-container text-center md:text-left">
+                © 2026 WHYBE. All rights reserved. Powered by WHYBE.
+            </div>
+<div class="flex gap-gutter font-body-base text-body-base">
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Code of Conduct</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Sponsorship</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
