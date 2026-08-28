@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" data-page="leaderboard">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leaderboard — WHYBE'26</title>
+<meta name="description" content="WHYBE'26 leaderboard — live team rankings on hackathon day." />
+<link rel="canonical" href="https://whybe.tech/leaderboard.html" />
+<link rel="icon" type="image/png" href="./assets/whybe26-favicon.png" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<script src="./assets/tailwind-config.js"></script>
+<link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-base text-body-base bg-background text-on-background">
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 header-scrolled">
+  <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-16 md:h-20">
+    <a href="index.html" class="flex items-center gap-2" aria-label="WHYBE'26 home">
+      <img src="./assets/whybe26-icon.png" alt="" class="h-8 w-auto md:h-9" width="289" height="187" />
+      <span class="font-display-lg text-xl md:text-2xl font-extrabold text-gradient">WHYBE'26</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+      <a data-nav="home" href="index.html" class="nav-link font-body-base">Home</a>
+      <a data-nav="about" href="about.html" class="nav-link font-body-base">About</a>
+      <a data-nav="timeline" href="timeline.html" class="nav-link font-body-base">Timeline</a>
+      <a data-nav="leaderboard" href="leaderboard.html" class="nav-link font-body-base">Leaderboard</a>
+      <!-- <a data-nav="conduct" href="code-of-conduct.html" class="nav-link font-body-base">Code of Conduct</a> -->
+    </nav>
+    <div class="hidden md:block">
+      <a href="https://forms.gle/wDKJctA7kkuydo6G6" target="_blank" rel="noopener noreferrer" class="btn-primary">Register</a>
+    </div>
+    <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-outline-variant text-on-surface" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant px-margin-mobile py-stack-md flex flex-col gap-stack-md">
+    <a data-nav="home" href="index.html" class="nav-link text-lg">Home</a>
+    <a data-nav="about" href="about.html" class="nav-link text-lg">About</a>
+    <a data-nav="timeline" href="timeline.html" class="nav-link text-lg">Timeline</a>
+    <a data-nav="leaderboard" href="leaderboard.html" class="nav-link text-lg">Leaderboard</a>
+    <!-- <a data-nav="conduct" href="code-of-conduct.html" class="nav-link text-lg">Code of Conduct</a> -->
+    <a href="https://forms.gle/wDKJctA7kkuydo6G6" target="_blank" rel="noopener noreferrer" class="btn-primary mt-stack-sm">Register</a>
+  </div>
+</header>
+
+<main id="main-content" class="flex-grow pt-24 md:pt-32">
+
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+  <span class="chip badge-neutral font-label-caps mx-auto">Registrations Open</span>
+  <h1 class="font-headline-md text-4xl md:text-5xl font-extrabold mt-stack-md text-gradient">Leaderboard</h1>
+  <p class="font-body-lg text-on-surface-variant mt-stack-sm max-w-2xl mx-auto">Live team rankings will appear here once judging begins on hackathon day.</p>
+</section>
+
+<!-- Pre-event placeholder state -->
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16">
+  <div class="glass-card rounded-xl p-stack-lg md:p-16 text-center">
+    <p class="font-label-caps text-secondary-container">Leaderboard opens on hackathon day</p>
+    <h2 class="font-headline-md text-2xl md:text-3xl font-bold mt-stack-sm">Check back once doors open</h2>
+    <div data-countdown class="flex items-center justify-center gap-stack-md mt-stack-lg font-label-mono">
+      <div class="glass-card rounded-lg px-stack-md py-stack-sm text-center min-w-[72px]">
+        <p class="text-2xl md:text-3xl text-secondary-container" data-cd-days>00</p>
+        <p class="font-label-caps text-on-surface-variant mt-1">Days</p>
+      </div>
+      <div class="glass-card rounded-lg px-stack-md py-stack-sm text-center min-w-[72px]">
+        <p class="text-2xl md:text-3xl text-primary" data-cd-hours>00</p>
+        <p class="font-label-caps text-on-surface-variant mt-1">Hours</p>
+      </div>
+      <div class="glass-card rounded-lg px-stack-md py-stack-sm text-center min-w-[72px]">
+        <p class="text-2xl md:text-3xl text-secondary-container" data-cd-minutes>00</p>
+        <p class="font-label-caps text-on-surface-variant mt-1">Mins</p>
+      </div>
+      <div class="glass-card rounded-lg px-stack-md py-stack-sm text-center min-w-[72px]">
+        <p class="text-2xl md:text-3xl text-primary" data-cd-seconds>00</p>
+        <p class="font-label-caps text-on-surface-variant mt-1">Secs</p>
+      </div>
+    </div>
+    <p class="font-label-caps text-on-surface-variant mt-stack-md">Countdown to hackathon day — September 15, 2026, 8 AM</p>
+  </div>
+</section>
+
+<!-- Preview / sample design — commented out for now
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+  <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+    <p class="font-label-caps text-secondary-container">Preview</p>
+    <h2 class="font-headline-md text-2xl md:text-3xl font-bold mt-stack-sm">Here's how live rankings will look</h2>
+    <p class="text-on-surface-variant mt-stack-sm">Sample data shown for preview purposes only.</p>
+  </div>
+
+  <div class="grid sm:grid-cols-3 gap-gutter mb-stack-lg items-end">
+    <div class="glass-card rounded-xl p-stack-lg text-center order-2 sm:order-1">
+      <p class="font-label-mono rank-silver text-3xl">#2</p>
+      <h3 class="font-headline-md text-lg font-bold mt-stack-sm">Team Byte</h3>
+      <p class="font-label-mono text-on-surface-variant mt-1">870 pts</p>
+    </div>
+    <div class="glass-card glow-effect-gold rounded-xl p-stack-lg text-center order-1 sm:order-2 sm:-translate-y-4">
+      <p class="font-label-mono rank-gold text-4xl">#1</p>
+      <h3 class="font-headline-md text-xl font-bold mt-stack-sm">Team Alpha</h3>
+      <p class="font-label-mono text-on-surface-variant mt-1">940 pts</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-lg text-center order-3">
+      <p class="font-label-mono rank-bronze text-3xl">#3</p>
+      <h3 class="font-headline-md text-lg font-bold mt-stack-sm">Team Cipher</h3>
+      <p class="font-label-mono text-on-surface-variant mt-1">810 pts</p>
+    </div>
+  </div>
+
+  <div class="hidden md:block glass-card rounded-xl overflow-hidden">
+    <table class="w-full leaderboard-table text-left">
+      <thead>
+        <tr class="font-label-caps">
+          <th class="px-stack-md py-stack-sm">Rank</th>
+          <th class="px-stack-md py-stack-sm">Team</th>
+          <th class="px-stack-md py-stack-sm">Track</th>
+          <th class="px-stack-md py-stack-sm text-right">Score</th>
+        </tr>
+      </thead>
+      <tbody class="font-body-base">
+        <tr><td class="px-stack-md py-stack-sm font-label-mono rank-gold">#1</td><td class="px-stack-md py-stack-sm font-semibold">Team Alpha</td><td class="px-stack-md py-stack-sm"><span class="chip badge-neutral font-label-caps">AI/ML</span></td><td class="px-stack-md py-stack-sm font-label-mono text-right">940</td></tr>
+        <tr><td class="px-stack-md py-stack-sm font-label-mono rank-silver">#2</td><td class="px-stack-md py-stack-sm font-semibold">Team Byte</td><td class="px-stack-md py-stack-sm"><span class="chip badge-neutral font-label-caps">Web</span></td><td class="px-stack-md py-stack-sm font-label-mono text-right">870</td></tr>
+        <tr><td class="px-stack-md py-stack-sm font-label-mono rank-bronze">#3</td><td class="px-stack-md py-stack-sm font-semibold">Team Cipher</td><td class="px-stack-md py-stack-sm"><span class="chip badge-neutral font-label-caps">Agents</span></td><td class="px-stack-md py-stack-sm font-label-mono text-right">810</td></tr>
+        <tr><td class="px-stack-md py-stack-sm font-label-mono text-on-surface-variant">#4</td><td class="px-stack-md py-stack-sm font-semibold">Team Delta</td><td class="px-stack-md py-stack-sm"><span class="chip badge-neutral font-label-caps">AI/ML</span></td><td class="px-stack-md py-stack-sm font-label-mono text-right">760</td></tr>
+        <tr><td class="px-stack-md py-stack-sm font-label-mono text-on-surface-variant">#5</td><td class="px-stack-md py-stack-sm font-semibold">Team Echo</td><td class="px-stack-md py-stack-sm"><span class="chip badge-neutral font-label-caps">Web</span></td><td class="px-stack-md py-stack-sm font-label-mono text-right">705</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="md:hidden flex flex-col gap-stack-sm">
+    <div class="glass-card rounded-xl p-stack-md flex items-center justify-between">
+      <div class="flex items-center gap-stack-sm"><span class="font-label-mono rank-gold text-xl">#1</span><span class="font-semibold">Team Alpha</span></div>
+      <span class="font-label-mono">940</span>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md flex items-center justify-between">
+      <div class="flex items-center gap-stack-sm"><span class="font-label-mono rank-silver text-xl">#2</span><span class="font-semibold">Team Byte</span></div>
+      <span class="font-label-mono">870</span>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md flex items-center justify-between">
+      <div class="flex items-center gap-stack-sm"><span class="font-label-mono rank-bronze text-xl">#3</span><span class="font-semibold">Team Cipher</span></div>
+      <span class="font-label-mono">810</span>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md flex items-center justify-between">
+      <div class="flex items-center gap-stack-sm"><span class="font-label-mono text-on-surface-variant text-xl">#4</span><span class="font-semibold">Team Delta</span></div>
+      <span class="font-label-mono">760</span>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md flex items-center justify-between">
+      <div class="flex items-center gap-stack-sm"><span class="font-label-mono text-on-surface-variant text-xl">#5</span><span class="font-semibold">Team Echo</span></div>
+      <span class="font-label-mono">705</span>
+    </div>
+  </div>
+</section>
+-->
+
+</main>
+
+<footer class="border-t border-outline-variant bg-surface-container-lowest">
+  <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg grid md:grid-cols-3 gap-stack-lg text-center md:text-left">
+    <div>
+      <a href="index.html" class="inline-flex items-center gap-2 justify-center md:justify-start" aria-label="WHYBE'26 home">
+        <img src="./assets/whybe26-icon.png" alt="" class="h-6 w-auto" width="289" height="187" />
+        <span class="font-display-lg text-lg font-extrabold text-gradient">WHYBE'26</span>
+      </a>
+      <p class="text-on-surface-variant mt-stack-sm">An AI-driven hackathon by TechnoCrats GSV.</p>
+      <p class="text-on-surface-variant mt-stack-sm">© <span data-year>2026</span> TechnoCrats GSV. All rights reserved.</p>
+    </div>
+    <div class="flex flex-col gap-stack-sm items-center md:items-start">
+      <p class="font-label-caps text-on-surface-variant mb-stack-sm">Site</p>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="timeline.html" class="nav-link">Timeline</a>
+      <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      <!-- <a href="code-of-conduct.html" class="nav-link">Code of Conduct</a> -->
+    </div>
+    <div class="flex flex-col gap-stack-sm items-center md:items-start">
+      <p class="font-label-caps text-on-surface-variant mb-stack-sm">Legal &amp; Social</p>
+      <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      <a href="terms.html" class="nav-link">Terms &amp; Conditions</a>
+      <div class="flex items-center gap-stack-sm mt-stack-sm">
+        <a href="https://www.instagram.com/technocrats.gsv/" class="social-btn" aria-label="Follow WHYBE'26 on Instagram" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/technocrats-gsv-4a7abb269/" class="social-btn" aria-label="Follow WHYBE'26 on LinkedIn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="1"/><path d="M11 17v-4a2 2 0 0 1 4 0v4"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
+        </a>
+        <a href="https://www.technocratsgsv.tech/" class="social-btn" aria-label="Visit the WHYBE'26 website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/site.js" defer></script>
+</body>
+</html>

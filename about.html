@@ -1,277 +1,197 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html class="dark" lang="en" data-page="about">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About - WHYBE'26</title>
-<meta name="description" content="About WHYBE'26 — an AI-driven hackathon, for the first time at GSV." />
-<link rel="icon" type="image/png" href="./assets/whybe26-logo.png" />
+<title>About — WHYBE'26</title>
+<meta name="description" content="About WHYBE'26 — an AI-driven hackathon by TechnoCrats GSV, for the first time at GSV." />
+<link rel="canonical" href="https://whybe.tech/about.html" />
+<link rel="icon" type="image/png" href="./assets/whybe26-favicon.png" />
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "surface-container-low": "#0d1c2d",
-                      "primary-container": "#8083ff",
-                      "on-secondary": "#283500",
-                      "outline-variant": "#464554",
-                      "surface-container-high": "#1c2b3c",
-                      "surface": "#051424",
-                      "surface-bright": "#2c3a4c",
-                      "inverse-on-surface": "#233143",
-                      "surface-dim": "#051424",
-                      "on-error-container": "#ffdad6",
-                      "on-primary-fixed-variant": "#2f2ebe",
-                      "on-secondary-fixed": "#161e00",
-                      "error": "#ffb4ab",
-                      "primary": "#c0c1ff",
-                      "tertiary-container": "#8990a8",
-                      "on-tertiary-container": "#22293d",
-                      "surface-tint": "#c0c1ff",
-                      "on-secondary-container": "#556d00",
-                      "background": "#051424",
-                      "surface-container-lowest": "#010f1f",
-                      "on-error": "#690005",
-                      "secondary-fixed-dim": "#abd600",
-                      "tertiary-fixed-dim": "#bec6e0",
-                      "error-container": "#93000a",
-                      "surface-variant": "#273647",
-                      "tertiary-fixed": "#dae2fd",
-                      "on-tertiary": "#283044",
-                      "on-primary-container": "#0d0096",
-                      "inverse-surface": "#d4e4fa",
-                      "on-primary": "#1000a9",
-                      "on-tertiary-fixed-variant": "#3f465c",
-                      "tertiary": "#bec6e0",
-                      "on-tertiary-fixed": "#131b2e",
-                      "surface-container-highest": "#273647",
-                      "primary-fixed-dim": "#c0c1ff",
-                      "secondary": "#ffffff",
-                      "surface-container": "#122131",
-                      "primary-fixed": "#e1e0ff",
-                      "secondary-fixed": "#c3f400",
-                      "on-surface-variant": "#c7c4d7",
-                      "on-surface": "#d4e4fa",
-                      "on-primary-fixed": "#07006c",
-                      "secondary-container": "#c3f400",
-                      "inverse-primary": "#494bd6",
-                      "outline": "#908fa0",
-                      "on-background": "#d4e4fa",
-                      "on-secondary-fixed-variant": "#3c4d00"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "base-unit": "4px",
-                      "stack-sm": "8px",
-                      "margin-mobile": "16px",
-                      "container-max-width": "1280px",
-                      "stack-lg": "32px",
-                      "gutter": "24px",
-                      "margin-desktop": "48px",
-                      "stack-md": "16px"
-              },
-              "fontFamily": {
-                      "label-caps": ["Inter"],
-                      "body-base": ["Inter"],
-                      "headline-md": ["Geist"],
-                      "display-lg": ["Geist"],
-                      "label-mono": ["JetBrains Mono"],
-                      "body-lg": ["Inter"],
-                      "display-lg-mobile": ["Geist"]
-              },
-              "fontSize": {
-                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                      "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                      "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
-                      "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
-              }
-      },
-          },
-        }
-      </script>
-<style>
-        .glass-card {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .glow-hover:hover {
-            box-shadow: 0 0 30px rgba(192, 193, 255, 0.15);
-        }
-      </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<script src="./assets/tailwind-config.js"></script>
+<link rel="stylesheet" href="./assets/styles.css" />
 </head>
-<body class="bg-background text-on-background font-body-base min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-outline-variant/10 shadow-[0_0_30px_rgba(192,193,255,0.1)]">
-<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
-<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary">
-                WHYBE'26
-            </div>
-<div class="hidden md:flex gap-gutter items-center font-label-caps text-label-caps">
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="./index.html">Home</a>
-<a class="text-primary border-b-2 border-primary pb-1 hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="./about.html">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="./timeline.html">Timeline</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Leaderboard</a>
-</div>
-<button class="bg-primary text-on-primary font-label-caps text-label-caps px-4 py-2 rounded flex items-center gap-2 hover:opacity-80 transition-all duration-300 active:scale-95 duration-200">
-                Register
-            </button>
-</div>
-</nav>
-<!-- Main Content -->
-<main class="flex-grow pt-32 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto w-full flex flex-col gap-stack-lg">
-<!-- Hero / Mission -->
-<section class="flex flex-col md:flex-row gap-gutter items-center min-h-[409px]">
-<div class="w-full md:w-1/2 flex flex-col gap-stack-md">
-<div class="inline-flex items-center gap-2 text-secondary-container font-label-mono text-label-mono bg-secondary-container/10 border border-secondary-container rounded-full px-3 py-1 w-fit">
-<span class="material-symbols-outlined text-[16px]">terminal</span>
-                    ABOUT_US.md
-                </div>
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">
-                    Empowering the next generation of builders
-                </h1>
-<p class="text-on-surface-variant font-body-lg text-body-lg">
-                    WHYBE'26 is more than a hackathon. It's a crucible for innovation, a high-contrast environment where deep tech meets relentless execution. We provide the grid, you build the future — for the first time at GSV.
-                </p>
-</div>
-<div class="w-full md:w-1/2 rounded-xl overflow-hidden glass-card h-64 md:h-96 relative group glow-hover transition-all duration-300">
-<div class="bg-cover bg-center w-full h-full absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500" style="background-image: url('./assets/about-hero.jpg')"></div>
-</div>
+<body class="antialiased min-h-screen flex flex-col font-body-base text-body-base bg-background text-on-background">
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 header-scrolled">
+  <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-16 md:h-20">
+    <a href="index.html" class="flex items-center gap-2" aria-label="WHYBE'26 home">
+      <img src="./assets/whybe26-icon.png" alt="" class="h-8 w-auto md:h-9" width="289" height="187" />
+      <span class="font-display-lg text-xl md:text-2xl font-extrabold text-gradient">WHYBE'26</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+      <a data-nav="home" href="index.html" class="nav-link font-body-base">Home</a>
+      <a data-nav="about" href="about.html" class="nav-link font-body-base">About</a>
+      <a data-nav="timeline" href="timeline.html" class="nav-link font-body-base">Timeline</a>
+      <a data-nav="leaderboard" href="leaderboard.html" class="nav-link font-body-base">Leaderboard</a>
+      <!-- <a data-nav="conduct" href="code-of-conduct.html" class="nav-link font-body-base">Code of Conduct</a> -->
+    </nav>
+    <div class="hidden md:block">
+      <a href="https://forms.gle/wDKJctA7kkuydo6G6" target="_blank" rel="noopener noreferrer" class="btn-primary">Register</a>
+    </div>
+    <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-outline-variant text-on-surface" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant px-margin-mobile py-stack-md flex flex-col gap-stack-md">
+    <a data-nav="home" href="index.html" class="nav-link text-lg">Home</a>
+    <a data-nav="about" href="about.html" class="nav-link text-lg">About</a>
+    <a data-nav="timeline" href="timeline.html" class="nav-link text-lg">Timeline</a>
+    <a data-nav="leaderboard" href="leaderboard.html" class="nav-link text-lg">Leaderboard</a>
+    <!-- <a data-nav="conduct" href="code-of-conduct.html" class="nav-link text-lg">Code of Conduct</a> -->
+    <a href="https://forms.gle/wDKJctA7kkuydo6G6" target="_blank" rel="noopener noreferrer" class="btn-primary mt-stack-sm">Register</a>
+  </div>
+</header>
+
+<main id="main-content" class="flex-grow pt-24 md:pt-32">
+
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+  <p class="font-label-caps text-secondary-container">About</p>
+  <h1 class="font-headline-md text-4xl md:text-5xl font-extrabold mt-stack-sm text-gradient">About WHYBE'26</h1>
+  <p class="font-body-lg text-on-surface-variant mt-stack-md max-w-2xl mx-auto">WHYBE'26 is an AI-driven hackathon hosted for the first time in GSV — a 10-hour sprint where teams of 4 design, build and ship with modern AI tools. Happening September 15, 2026, 8 AM – 6 PM.</p>
 </section>
-<!-- History Bento Grid -->
-<section class="flex flex-col gap-stack-md">
-<h2 class="font-headline-md text-headline-md text-on-surface">Our Execution History</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="glass-card p-6 rounded-xl flex flex-col gap-4 glow-hover transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
-<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Initial Commit</h3>
-<p class="text-on-surface-variant font-body-base text-body-base">
-                        WHYBE started as a rigorous, tech-first hackathon sprint — built for builders who want to ship, not just prototype.
-                    </p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col gap-4 md:col-span-2 glow-hover transition-all duration-300">
-<div class="flex justify-between items-start">
-<span class="material-symbols-outlined text-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">public</span>
-<span class="text-on-surface-variant font-label-mono text-label-mono bg-surface-container-high px-2 py-1 rounded">2026_GSV</span>
-</div>
-<h3 class="font-body-lg text-body-lg font-bold text-on-surface">First Time at GSV</h3>
-<p class="text-on-surface-variant font-body-base text-body-base">
-                        WHYBE'26 marks our first edition hosted at GSV — an AI-driven hackathon with a 4.5K prize pool, bringing together builders for 48 hours of non-stop shipping.
-                    </p>
-</div>
-</div>
+
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-14 grid md:grid-cols-2 gap-stack-lg items-start">
+  <div>
+    <h2 class="font-headline-md text-2xl md:text-3xl font-bold mb-stack-sm">Our story</h2>
+    <p class="text-on-surface-variant">WHYBE'26 is organized by <span class="text-on-surface font-semibold">TechnoCrats GSV</span>, the campus technical community, to bring a genuinely AI-first hackathon experience to GSV for the first time.</p>
+    <p class="text-on-surface-variant mt-stack-md">Instead of a multi-day marathon, WHYBE'26 compresses everything into a focused 10-hour sprint — enough time to go from idea to a working, AI-powered build, without the burnout of a 24 or 36-hour format.</p>
+    <p class="text-on-surface-variant mt-stack-md">Every team ships with AI in the loop: copilots, agents, applied ML, or generative tooling — judged not just on the idea, but on how thoughtfully AI is used to build it.</p>
+  </div>
+  <div class="glass-card rounded-xl p-stack-lg">
+    <h2 class="font-headline-md text-xl font-bold mb-stack-md">Event facts</h2>
+    <ul class="flex flex-col gap-stack-md">
+      <li class="flex items-center justify-between border-b border-outline-variant pb-stack-sm">
+        <span class="text-on-surface-variant">Date</span>
+        <span class="font-label-mono text-secondary-container">Sep 15, 2026</span>
+      </li>
+      <li class="flex items-center justify-between border-b border-outline-variant pb-stack-sm">
+        <span class="text-on-surface-variant">Timing</span>
+        <span class="font-label-mono text-primary">8 AM – 6 PM</span>
+      </li>
+      <li class="flex items-center justify-between border-b border-outline-variant pb-stack-sm">
+        <span class="text-on-surface-variant">Format</span>
+        <span class="font-label-mono text-primary">AI-Driven</span>
+      </li>
+      <li class="flex items-center justify-between border-b border-outline-variant pb-stack-sm">
+        <span class="text-on-surface-variant">Duration</span>
+        <span class="font-label-mono text-secondary-container">10 Hours</span>
+      </li>
+      <li class="flex items-center justify-between border-b border-outline-variant pb-stack-sm">
+        <span class="text-on-surface-variant">Team size</span>
+        <span class="font-label-mono text-primary">4 Members</span>
+      </li>
+      <li class="flex items-center justify-between">
+        <span class="text-on-surface-variant">Entry fee</span>
+        <span class="font-label-mono text-secondary-container">₹80 / team</span>
+      </li>
+    </ul>
+  </div>
 </section>
-<!-- Values -->
-<section class="flex flex-col gap-stack-md">
-<h2 class="font-headline-md text-headline-md text-on-surface">System Variables</h2>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="bg-surface-container-low border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-colors">
-<h4 class="font-label-mono text-label-mono text-primary mb-2">01. SPEED</h4>
-<p class="text-on-surface-variant text-sm">Execution over perfection. Ship fast, iterate faster.</p>
-</div>
-<div class="bg-surface-container-low border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-colors">
-<h4 class="font-label-mono text-label-mono text-primary mb-2">02. CLARITY</h4>
-<p class="text-on-surface-variant text-sm">Clean code, clean design. Remove the unnecessary noise.</p>
-</div>
-<div class="bg-surface-container-low border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-colors">
-<h4 class="font-label-mono text-label-mono text-primary mb-2">03. IMPACT</h4>
-<p class="text-on-surface-variant text-sm">Build tools that move the needle in the real world.</p>
-</div>
-<div class="bg-surface-container-low border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-colors">
-<h4 class="font-label-mono text-label-mono text-primary mb-2">04. OPEN</h4>
-<p class="text-on-surface-variant text-sm">Default to open source. Share knowledge ruthlessly.</p>
-</div>
-</div>
+
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md text-center">
+    <div class="glass-card rounded-xl p-stack-md">
+      <p class="font-label-mono text-lg text-secondary-container">1st Edition</p>
+      <p class="font-label-caps text-on-surface-variant mt-1">At GSV</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md">
+      <p class="font-label-mono text-lg text-primary">AI-First</p>
+      <p class="font-label-caps text-on-surface-variant mt-1">Tracks</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md">
+      <p class="font-label-mono text-lg text-secondary-container">10 Hrs</p>
+      <p class="font-label-caps text-on-surface-variant mt-1">Sprint</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-md">
+      <p class="font-label-mono text-lg text-primary">₹80</p>
+      <p class="font-label-caps text-on-surface-variant mt-1">All-Inclusive</p>
+    </div>
+  </div>
 </section>
-<!-- Team -->
-<section class="flex flex-col gap-stack-md">
-<div class="flex justify-between items-end">
-<h2 class="font-headline-md text-headline-md text-on-surface">Core Maintainers</h2>
-<a class="text-primary font-label-caps text-label-caps hover:text-primary-container transition-colors flex items-center gap-1" href="#">
-                    VIEW ALL <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter">
-<!-- Team Member 1 -->
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="h-48 relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Lead Architect" src="./assets/team-1.jpg"/>
-</div>
-<div class="p-4 border-t border-outline-variant/10">
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface">Alex Chen</h4>
-<p class="text-on-surface-variant font-label-mono text-label-mono text-[12px] mt-1">Lead Architect</p>
-</div>
-</div>
-<!-- Team Member 2 -->
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="h-48 relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Operations Head" src="./assets/team-2.jpg"/>
-</div>
-<div class="p-4 border-t border-outline-variant/10">
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface">Sarah Jenkins</h4>
-<p class="text-on-surface-variant font-label-mono text-label-mono text-[12px] mt-1">Operations Head</p>
-</div>
-</div>
-<!-- Team Member 3 -->
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="h-48 relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Design Systems" src="./assets/team-3.jpg"/>
-</div>
-<div class="p-4 border-t border-outline-variant/10">
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface">Marcus Doe</h4>
-<p class="text-on-surface-variant font-label-mono text-label-mono text-[12px] mt-1">Design Systems</p>
-</div>
-</div>
-<!-- Team Member 4 -->
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="h-48 relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Community Lead" src="./assets/team-4.jpg"/>
-</div>
-<div class="p-4 border-t border-outline-variant/10">
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface">Priya Patel</h4>
-<p class="text-on-surface-variant font-label-mono text-label-mono text-[12px] mt-1">Community Lead</p>
-</div>
-</div>
-</div>
+
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-14">
+  <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+    <p class="font-label-caps text-secondary-container">The organizers</p>
+    <h2 class="font-headline-md text-2xl md:text-3xl font-bold mt-stack-sm">Run by TechnoCrats GSV</h2>
+    <p class="text-on-surface-variant mt-stack-sm">The core team behind WHYBE'26's first edition.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+    <div class="glass-card rounded-xl p-stack-lg text-center">
+      <div class="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-primary to-secondary-container flex items-center justify-center font-display-lg font-extrabold text-surface">A</div>
+      <h3 class="font-headline-md text-lg font-bold mt-stack-sm">Abhinav Mishra</h3>
+      <p class="font-label-caps text-on-surface-variant mt-1">Organizing Lead</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-lg text-center">
+      <div class="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-primary to-secondary-container flex items-center justify-center font-display-lg font-extrabold text-surface">S</div>
+      <h3 class="font-headline-md text-lg font-bold mt-stack-sm">Shashank Savarkar</h3>
+      <p class="font-label-caps text-on-surface-variant mt-1">Tech Lead</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-lg text-center">
+      <div class="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-primary to-secondary-container flex items-center justify-center font-display-lg font-extrabold text-surface">S</div>
+      <h3 class="font-headline-md text-lg font-bold mt-stack-sm">Shreyash Malviya</h3>
+      <p class="font-label-caps text-on-surface-variant mt-1">Design Lead</p>
+    </div>
+    <div class="glass-card rounded-xl p-stack-lg text-center">
+      <div class="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-primary to-secondary-container flex items-center justify-center font-display-lg font-extrabold text-surface">T</div>
+      <h3 class="font-headline-md text-lg font-bold mt-stack-sm">Trisha Patel</h3>
+      <p class="font-label-caps text-on-surface-variant mt-1">Outreach Lead</p>
+    </div>
+  </div>
 </section>
-<!-- Sponsors -->
-<section class="flex flex-col gap-stack-md py-stack-lg border-t border-outline-variant/10 mt-stack-lg">
-<h2 class="font-headline-md text-headline-md text-on-surface text-center mb-stack-md">Infrastructure Partners</h2>
-<div class="flex flex-wrap justify-center gap-8 items-center opacity-70">
-<!-- Placeholder Sponsor Logos -->
-<div class="w-32 h-12 bg-surface-container-high border border-outline-variant/30 rounded flex items-center justify-center font-label-mono text-label-mono text-on-surface-variant">LOGIC_CORP</div>
-<div class="w-32 h-12 bg-surface-container-high border border-outline-variant/30 rounded flex items-center justify-center font-label-mono text-label-mono text-on-surface-variant">NEXUS_DB</div>
-<div class="w-32 h-12 bg-surface-container-high border border-outline-variant/30 rounded flex items-center justify-center font-label-mono text-label-mono text-on-surface-variant">CLOUD_SYNC</div>
-<div class="w-32 h-12 bg-surface-container-high border border-outline-variant/30 rounded flex items-center justify-center font-label-mono text-label-mono text-on-surface-variant">SYNTAX_AI</div>
-<div class="w-32 h-12 bg-surface-container-high border border-outline-variant/30 rounded flex items-center justify-center font-label-mono text-label-mono text-on-surface-variant">FRAMEWORK</div>
-</div>
+
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop pb-20 md:pb-24">
+  <div class="glass-card glow-effect rounded-xl p-stack-lg text-center">
+    <h2 class="font-headline-md text-2xl md:text-3xl font-bold text-gradient">Want to be part of it?</h2>
+    <p class="text-on-surface-variant mt-stack-sm">Rally your team of 4 and get ready for WHYBE'26.</p>
+    <a href="https://forms.gle/wDKJctA7kkuydo6G6" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block mt-stack-md">Register Now</a>
+  </div>
 </section>
+
 </main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md">
-<div class="font-headline-md text-headline-md text-primary">
-            WHYBE'26
-        </div>
-<div class="flex flex-wrap justify-center gap-gutter font-body-base text-body-base text-on-surface-variant">
-<a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-secondary-container transition-colors" href="#">Code of Conduct</a>
-<a class="hover:text-secondary-container transition-colors" href="#">Sponsorship</a>
-<a class="hover:text-secondary-container transition-colors" href="#">Contact</a>
-</div>
-<div class="text-secondary-container dark:text-secondary-container font-label-mono text-label-mono text-[12px]">
-            © 2026 WHYBE. All rights reserved. Powered by WHYBE.
-        </div>
+
+<footer class="border-t border-outline-variant bg-surface-container-lowest">
+  <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg grid md:grid-cols-3 gap-stack-lg text-center md:text-left">
+    <div>
+      <a href="index.html" class="inline-flex items-center gap-2 justify-center md:justify-start" aria-label="WHYBE'26 home">
+        <img src="./assets/whybe26-icon.png" alt="" class="h-6 w-auto" width="289" height="187" />
+        <span class="font-display-lg text-lg font-extrabold text-gradient">WHYBE'26</span>
+      </a>
+      <p class="text-on-surface-variant mt-stack-sm">An AI-driven hackathon by TechnoCrats GSV.</p>
+      <p class="text-on-surface-variant mt-stack-sm">© <span data-year>2026</span> TechnoCrats GSV. All rights reserved.</p>
+    </div>
+    <div class="flex flex-col gap-stack-sm items-center md:items-start">
+      <p class="font-label-caps text-on-surface-variant mb-stack-sm">Site</p>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="timeline.html" class="nav-link">Timeline</a>
+      <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      <!-- <a href="code-of-conduct.html" class="nav-link">Code of Conduct</a> -->
+    </div>
+    <div class="flex flex-col gap-stack-sm items-center md:items-start">
+      <p class="font-label-caps text-on-surface-variant mb-stack-sm">Legal &amp; Social</p>
+      <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      <a href="terms.html" class="nav-link">Terms &amp; Conditions</a>
+      <div class="flex items-center gap-stack-sm mt-stack-sm">
+        <a href="https://www.instagram.com/technocrats.gsv/" class="social-btn" aria-label="Follow WHYBE'26 on Instagram" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/technocrats-gsv-4a7abb269/" class="social-btn" aria-label="Follow WHYBE'26 on LinkedIn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="1"/><path d="M11 17v-4a2 2 0 0 1 4 0v4"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
+        </a>
+        <a href="https://www.technocratsgsv.tech/" class="social-btn" aria-label="Visit the WHYBE'26 website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
-</body></html>
+
+<script src="./assets/site.js" defer></script>
+</body>
+</html>
