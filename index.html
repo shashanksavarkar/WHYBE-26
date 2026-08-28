@@ -1,13 +1,187 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>whybe-26</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WHYBE'26 — AI-Driven Hackathon at GSV</title>
+<meta name="description" content="WHYBE'26 — An AI-Driven Hackathon, for the first time at GSV. ₹4.5K prize pool. Build, ship, and compete." />
+<link rel="icon" type="image/png" href="./assets/whybe26-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#051424',
+          surface: '#0d1c2d',
+          'surface-high': '#1c2b3c',
+          border: 'rgba(255,255,255,0.1)',
+          indigo: {
+            DEFAULT: '#6366f1',
+            light: '#c0c1ff',
+            dark: '#1000a9',
+          },
+          lime: {
+            DEFAULT: '#c3f400',
+            dim: '#abd600',
+          },
+          ink: '#d4e4fa',
+          'ink-dim': '#94a3b8',
+        },
+        fontFamily: {
+          display: ['Geist', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+        boxShadow: {
+          glow: '0 0 40px rgba(99,102,241,0.25)',
+          'glow-lime': '0 0 30px rgba(195,244,0,0.2)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  body {
+    background-color: #051424;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(99,102,241,0.20), transparent 45%),
+      radial-gradient(circle at 85% 20%, rgba(195,244,0,0.10), transparent 40%);
+    background-attachment: fixed;
+  }
+  .glass {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .grid-fade {
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+</style>
+</head>
+
+<body class="font-body text-ink antialiased min-h-screen">
+
+<!-- Nav -->
+<header class="sticky top-0 z-50 border-b border-border/60 glass">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="#" class="flex items-center gap-3">
+      <img src="./assets/whybe26-logo.png" alt="WHYBE'26 logo" class="h-9 w-9 rounded-lg shadow-glow" />
+      <span class="font-display font-800 text-lg tracking-tight text-white">WHYBE<span class="text-lime">'26</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-ink-dim">
+      <a href="#about" class="hover:text-white transition-colors">About</a>
+      <a href="#tracks" class="hover:text-white transition-colors">Tracks</a>
+      <a href="#timeline" class="hover:text-white transition-colors">Timeline</a>
+      <a href="#prizes" class="hover:text-white transition-colors">Prizes</a>
+      <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+    </nav>
+    <a href="#register" class="inline-flex items-center rounded-md bg-indigo px-4 py-2 text-sm font-semibold text-white hover:brightness-110 transition">
+      Register Now
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+  <div class="grid-fade absolute inset-0 h-[600px] pointer-events-none"></div>
+
+  <div class="relative max-w-5xl mx-auto px-6 pt-20 pb-24 text-center flex flex-col items-center">
+    <div class="inline-flex items-center gap-2 rounded-full border border-lime/40 bg-lime/10 px-4 py-1.5 mb-8">
+      <span class="h-1.5 w-1.5 rounded-full bg-lime animate-pulse"></span>
+      <span class="font-mono text-xs uppercase tracking-widest text-lime">Registrations Open</span>
+    </div>
+
+    <img src="./assets/whybe26-logo.png" alt="WHYBE'26" class="h-20 w-20 md:h-24 md:w-24 rounded-2xl shadow-glow mb-8" />
+
+    <h1 class="font-display font-800 text-white leading-[0.95] tracking-tight text-5xl md:text-7xl">
+      WHYBE<span class="text-indigo-light">'26</span>
+    </h1>
+
+    <p class="mt-6 font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-lime">
+      An AI-Driven Hackathon
+    </p>
+
+    <p class="mt-4 max-w-2xl text-lg md:text-xl text-ink-dim">
+      For the first time at <span class="text-white font-medium">GSV</span> — 24 hours to design, build,
+      and ship with AI. Bring your team, bring your ideas, and compete for the top prize pool.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center gap-4">
+      <a href="#register" id="register"
+         class="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-indigo px-8 py-3.5 text-base font-semibold text-white shadow-glow hover:brightness-110 transition">
+        Register Your Team →
+      </a>
+      <a href="#about"
+         class="w-full sm:w-auto inline-flex items-center justify-center rounded-md border border-white/20 px-8 py-3.5 text-base font-semibold text-lime hover:bg-white/5 transition">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Stat strip -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+      <div class="glass rounded-lg px-4 py-5">
+        <p class="font-display font-800 text-2xl md:text-3xl text-lime">4.5K</p>
+        <p class="mt-1 font-mono text-[11px] uppercase tracking-widest text-ink-dim">Prize Pool</p>
+      </div>
+      <div class="glass rounded-lg px-4 py-5">
+        <p class="font-display font-800 text-2xl md:text-3xl text-white">24 Hrs</p>
+        <p class="mt-1 font-mono text-[11px] uppercase tracking-widest text-ink-dim">Non-stop Build</p>
+      </div>
+      <div class="glass rounded-lg px-4 py-5">
+        <p class="font-display font-800 text-2xl md:text-3xl text-white">100+</p>
+        <p class="mt-1 font-mono text-[11px] uppercase tracking-widest text-ink-dim">Builders</p>
+      </div>
+      <div class="glass rounded-lg px-4 py-5">
+        <p class="font-display font-800 text-2xl md:text-3xl text-white">1st</p>
+        <p class="mt-1 font-mono text-[11px] uppercase tracking-widest text-ink-dim">Edition @ GSV</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="max-w-5xl mx-auto px-6 py-20 text-center">
+  <span class="font-mono text-xs uppercase tracking-widest text-indigo-light">// about the event</span>
+  <h2 class="mt-4 font-display font-700 text-3xl md:text-4xl text-white">
+    GSV's first AI-driven hackathon
+  </h2>
+  <p class="mt-5 max-w-2xl mx-auto text-ink-dim text-base md:text-lg">
+    WHYBE'26 brings together builders, designers, and AI enthusiasts for a high-energy,
+    terminal-fast weekend of shipping real products. Whether you're fine-tuning models,
+    building agentic workflows, or crafting the next great AI-native app — this is your arena.
+  </p>
+</section>
+
+<!-- Prizes -->
+<section id="prizes" class="max-w-5xl mx-auto px-6 py-20">
+  <div class="glass rounded-xl p-10 text-center shadow-glow-lime">
+    <span class="font-mono text-xs uppercase tracking-widest text-lime">// prize pool</span>
+    <p class="mt-4 font-display font-800 text-5xl md:text-6xl text-white">4.5K</p>
+    <p class="mt-2 text-ink-dim">across winners, runner-ups, and special AI-track awards</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-border/60">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <img src="./assets/whybe26-logo.png" alt="" class="h-6 w-6 rounded-md" />
+      <span class="font-mono text-xs text-ink-dim">WHYBE'26 · GSV · 2026</span>
+    </div>
+    <p class="font-mono text-xs text-ink-dim">Built for builders.</p>
+  </div>
+</footer>
+
+</body>
 </html>
