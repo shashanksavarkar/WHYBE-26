@@ -9,7 +9,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -126,132 +125,47 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .text-gradient-animated {
+            background: linear-gradient(90deg, #c0c1ff, #c3f400, #c0c1ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { text-shadow: 0 0 20px rgba(195, 244, 0, 0.4), 0 0 40px rgba(195, 244, 0, 0.15); }
+            50% { text-shadow: 0 0 45px rgba(195, 244, 0, 0.9), 0 0 90px rgba(195, 244, 0, 0.5); }
+        }
+        .glow-pulse-text {
+            animation: glow-pulse 2.4s ease-in-out infinite;
+        }
+
+        @keyframes float-y {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .float-text {
+            animation: float-y 5s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col font-body-base text-body-base">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-outline-variant/10 shadow-[0_0_30px_rgba(192,193,255,0.1)]">
-<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
-<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary">
-                WHYBE'26
-            </div>
-<nav class="hidden md:flex gap-gutter">
-<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 active:scale-95 duration-200" href="./index.html">Home</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="./about.html">About</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="./timeline.html">Timeline</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Leaderboard</a>
-</nav>
-<button class="bg-primary text-on-primary font-label-caps text-label-caps px-stack-md py-stack-sm rounded-lg hover:brightness-110 transition-all duration-300 active:scale-95 shadow-[0_0_15px_rgba(192,193,255,0.3)]">
-                Register
-            </button>
-</div>
-</header>
-<main class="flex-grow pt-24 md:pt-32 pb-stack-lg">
+<main class="flex-grow">
 <!-- Hero Section -->
-<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop min-h-[70vh] flex flex-col justify-center relative">
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop min-h-screen flex flex-col items-center justify-center relative text-center">
 <div class="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/40 via-background to-background"></div>
-<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
-<div class="flex flex-col gap-stack-md items-start">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-secondary-container/20 bg-secondary-container/10">
-<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
-<span class="font-label-mono text-label-mono text-secondary-container">Registration Open</span>
-</div>
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background">
-                        Defining the <br/>
-<span class="text-gradient">Future of AI Innovation</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        For the first time at GSV — an AI-driven hackathon where builders, creators, and visionaries ship real products in one intense, non-stop weekend.
-                    </p>
-<div class="flex flex-wrap gap-stack-md mt-stack-sm">
-<button class="bg-primary text-on-primary font-label-caps text-label-caps px-stack-lg py-stack-md rounded-lg hover:brightness-110 transition-all duration-300 active:scale-95 glow-effect">
-                            Register Now
-                        </button>
-<button class="bg-transparent border border-white/20 text-secondary-container font-label-caps text-label-caps px-stack-lg py-stack-md rounded-lg hover:bg-white/5 transition-all duration-300 active:scale-95">
-                            Join Discord
-                        </button>
-</div>
-</div>
-<div class="flex justify-center items-center">
-<div class="relative w-full max-w-md aspect-square rounded-xl overflow-hidden glass-card glow-effect p-stack-sm">
-<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
-<img alt="WHYBE'26 Hackathon Logo" class="w-full h-full object-contain relative z-10 filter drop-shadow-2xl" src="./assets/whybe26-logo.png"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Stats Section -->
-<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="glass-card rounded-xl p-stack-lg flex flex-col items-center justify-center text-center border-t-2 border-t-primary/50 hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-4xl text-primary mb-stack-sm" style="font-variation-settings: 'FILL' 1;">groups</span>
-<h3 class="font-headline-md text-headline-md text-on-background">100+</h3>
-<p class="font-label-mono text-label-mono text-on-surface-variant">Participants</p>
-</div>
-<div class="glass-card rounded-xl p-stack-lg flex flex-col items-center justify-center text-center border-t-2 border-t-secondary-container/50 hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-4xl text-secondary-container mb-stack-sm" style="font-variation-settings: 'FILL' 1;">payments</span>
-<h3 class="font-headline-md text-headline-md text-on-background">4.5K</h3>
-<p class="font-label-mono text-label-mono text-on-surface-variant">Prize Pool</p>
-</div>
-<div class="glass-card rounded-xl p-stack-lg flex flex-col items-center justify-center text-center border-t-2 border-t-primary/50 hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-4xl text-primary mb-stack-sm" style="font-variation-settings: 'FILL' 1;">schedule</span>
-<h3 class="font-headline-md text-headline-md text-on-background">48 Hours</h3>
-<p class="font-label-mono text-label-mono text-on-surface-variant">Of Hacking</p>
-</div>
-</div>
-</section>
-<!-- Highlights Section -->
-<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
-<div class="flex flex-col gap-stack-md mb-stack-lg">
-<h2 class="font-headline-md text-headline-md text-on-background">Event Highlights</h2>
-<p class="font-body-base text-body-base text-on-surface-variant max-w-2xl">Experience a hackathon designed for maximum impact, learning, and connection.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Highlight Card 1 -->
-<div class="glass-card rounded-xl p-stack-md flex flex-col gap-stack-sm group relative overflow-hidden">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/40 transition-all duration-500"></div>
-<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 mb-stack-sm relative z-10">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">code</span>
-</div>
-<h4 class="font-label-caps text-label-caps text-on-background relative z-10">Workshops &amp; Mentorship</h4>
-<p class="font-body-base text-body-base text-on-surface-variant relative z-10">Learn from industry experts through hands-on technical workshops and 1:1 mentorship sessions throughout the event.</p>
-</div>
-<!-- Highlight Card 2 -->
-<div class="glass-card rounded-xl p-stack-md flex flex-col gap-stack-sm group relative overflow-hidden">
-<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-secondary-container/40 transition-all duration-500"></div>
-<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 mb-stack-sm relative z-10">
-<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">hub</span>
-</div>
-<h4 class="font-label-caps text-label-caps text-on-background relative z-10">High-Tier Networking</h4>
-<p class="font-body-base text-body-base text-on-surface-variant relative z-10">Connect with sponsors, recruiters, and fellow top-tier developers. Build your network while building your project.</p>
-</div>
-<!-- Highlight Card 3 -->
-<div class="glass-card rounded-xl p-stack-md flex flex-col gap-stack-sm group relative overflow-hidden md:col-span-2 lg:col-span-1">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/40 transition-all duration-500"></div>
-<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 mb-stack-sm relative z-10">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">trophy</span>
-</div>
-<h4 class="font-label-caps text-label-caps text-on-background relative z-10">Massive Prizes</h4>
-<p class="font-body-base text-body-base text-on-surface-variant relative z-10">Compete across multiple tracks including AI, Web3, and Sustainability for a share of our 4.5K prize pool.</p>
-</div>
+<div class="relative z-10 flex flex-col items-center gap-stack-sm">
+<p class="float-text font-body-lg text-3xl sm:text-4xl md:text-5xl text-on-surface-variant tracking-wide">TechnoCrats GSV Presents</p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-gradient-animated leading-none text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold">WHYBE'26</h1>
+<p class="glow-pulse-text font-display-lg-mobile md:font-display-lg text-secondary-container leading-none mt-stack-sm text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold">Coming Soon!</p>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg border-t border-outline-variant/10 bg-surface-container-lowest dark:bg-surface-container-lowest">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-container-max-width mx-auto">
-<div class="font-headline-md text-headline-md text-primary">
-                WHYBE'26
-            </div>
-<nav class="flex gap-gutter flex-wrap justify-center">
-<a class="font-body-base text-body-base text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-base text-body-base text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Code of Conduct</a>
-<a class="font-body-base text-body-base text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Sponsorship</a>
-<a class="font-body-base text-body-base text-on-surface-variant hover:text-secondary-container transition-colors" href="#">Contact</a>
-</nav>
-<div class="font-body-base text-body-base text-secondary-container dark:text-secondary-container text-center md:text-right">
-                © 2026 WHYBE. All rights reserved. Powered by WHYBE.
-            </div>
-</div>
-</footer>
 </body></html>
